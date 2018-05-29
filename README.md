@@ -3,6 +3,7 @@
 [![GitHub license](https://img.shields.io/github/license/LeO-Fr/ASF-DiscordBot.svg)](https://github.com/LeO-Fr/ASF-DiscordBot/blob/master/LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.5-blue.svg)](https://pypi.python.org/)
 [![ASF release](https://img.shields.io/github/release/JustArchi/ArchiSteamFarm.svg?label=ASF&maxAge=600)](https://github.com/JustArchi/ArchiSteamFarm/releases/latest)
+[![Discord](https://img.shields.io/badge/Discord-chat-brightgreen.svg)](https://discord.gg/bdnQ44M)
 
 
 ## Requirements
@@ -16,7 +17,7 @@
 ```shell
 sudo apt-get install python3 python3-pip
 sudo python3 -m pip install -U discord.py
-python3 -m pip install -U requests
+sudo python3 -m pip install -U requests
 git clone https://github.com/LeO-Fr/ASF-DiscordBot.git
 cd ASF-DiscordBot
 ```
@@ -34,4 +35,3 @@ In bot_cog.py: If you set a IPC password, replace ?password=null with ?password=
 ```shell
 python3 bot_main.py
 ```
-
