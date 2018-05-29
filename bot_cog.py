@@ -1,6 +1,8 @@
 ###
 ###
 ### Replace bot_master_here with your Discord ID. (right click on your avatar in Developer mode).
+###If you set a IPC password, replace ?password=null with ?password=yourpassword
+###
 ###
 ###
 import discord
@@ -15,11 +17,12 @@ class Asf:
 	def __init__(self, bot):
 		self.bot = bot
 		self.url_base = "http://127.0.0.1:1242/Api/Command/"
+		self.ipc_pass = "?password=null"
 		pass
         
 	def get (self, params):
 		"""API access"""
-		url = "{url_base}{params}".format(url_base = self.url_base, params = params)
+		url = "{url_base}{params}{ipc_pass}".format(url_base = self.url_base, params = params, ipc_pass = self.ipc_pass)
 		
 		print (url)
 
