@@ -1,6 +1,8 @@
 # ASF-DiscordBot
 Do you want to use Discord instead of Steam to send commands to your bots? ASF-DiscordBit is for you!
 
+YOU NEED TO ENABLE IPC ON ASF!
+
 This bot needs python3.5 with modules discord.py and requests:
 
 sudo apt-get install python3 python3-pip
@@ -14,3 +16,6 @@ Start bot using:
 python3 bot_main.py
 
 MAKE SURE YOU ARE USING PYTHON 3.5 OR NEWER.
+
+
+Big thanks to @Christophe#6332
