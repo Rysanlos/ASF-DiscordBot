@@ -1,5 +1,5 @@
 # ASF-DiscordBot
-Do you want to use Discord instead of Steam to send commands to your bots? ASF-DiscordBit is for you!
+Do you want to use Discord instead of Steam to send commands to your bots? ASF-DiscordBot is for you!
 
 YOU NEED TO ENABLE IPC ON ASF!
 
