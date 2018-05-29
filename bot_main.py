@@ -22,18 +22,18 @@ client = Bot(description="ASF-DiscordBot", command_prefix="!", pm_help = False)
 
 @client.event
 async def on_ready():
-    print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
-    print('Use this link to invite {}:'.format(client.user.name))
-    print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
+	print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
+	print('Use this link to invite {}:'.format(client.user.name))
+	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
 
-    servers = client.servers
+	servers = client.servers
 
 if __name__ == "__main__":
-    for extension in startup_extensions:
-        try:
-            client.load_extension(extension)
-        except Exception as e:
-            exc = '{}: {}'.format(type(e).__name__, e)
-            print('Failed to load extension {}\n{}'.format(extension, exc))
+	for extension in startup_extensions:
+		try:
+			client.load_extension(extension)
+		except Exception as e:
+			exc = '{}: {}'.format(type(e).__name__, e)
+			print('Failed to load extension {}\n{}'.format(extension, exc))
 
-    client.run('bot_token_here')
+	client.run('bot_token_here')

@@ -12,40 +12,37 @@ import requests
 
 class Asf:
 
-    def __init__(self, bot):
-        self.bot = bot
-        self.url_base = "http://127.0.0.1:1242/Api/Command/"
-        pass
+	def __init__(self, bot):
+		self.bot = bot
+		self.url_base = "http://127.0.0.1:1242/Api/Command/"
+		pass
         
-    def get (self, params):
-        """API access"""
-
+	def get (self, params):
+		"""API access"""
 		url = "{url_base}{params}".format(url_base = self.url_base, params = params)
+		
+		print (url)
+
+		try:
+			r = requests.post(url, timeout=10)
+		except requests.exceptions.RequestException as e:  # This is the correct syntax
+			return "Erreur : " + str(e)
+		json_res = r.json()
+		response = "Message : " + json_res["Message"] + "\n```\n" + json_res["Result"] + "\n```"
+		return response
+
+	#@commands.listen()
+	async def on_message(self,message):
+		if ( message.content[0] == "!" and message.author.id == "bot_master_here"):
+			args = message.content[1:].replace(" ","%20")
+
+			await self.bot.send_typing(message.channel)
+			response = self.get(name, args)
+			try:
+				await self.bot.send_message(message.channel, response)
+			except:
+				await self.bot.send_message(message.channel, "Message too long.")
 
 
-        
-        print (url)
-        
-        try:
-            r = requests.post(url, timeout=10)
-        except requests.exceptions.RequestException as e:  # This is the correct syntax
-            return "Erreur : " + str(e)
-        json_res = r.json()
-        response = "Message : " + json_res["Message"] + "\n```\n" + json_res["Result"] + "\n```"
-        return response
- 
-    #@commands.listen()
-    async def on_message(self,message):
-        if ( message.content[0] == "!" and message.author.id == "bot_master_here"):
-            args = message.content[1:].replace(" ","%20")
-                
-            await self.bot.send_typing(message.channel)
-            response = self.get(name, args)
-            try:
-                await self.bot.send_message(message.channel, response)
-            except:
-                await self.bot.send_message(message.channel, "Message too long.")
-            
-    
 def setup(bot):
-    bot.add_cog(Asf(bot))
+	bot.add_cog(Asf(bot))
