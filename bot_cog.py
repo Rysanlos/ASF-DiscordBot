@@ -37,7 +37,7 @@ class Asf:
 			args = message.content[1:].replace(" ","%20")
 
 			await self.bot.send_typing(message.channel)
-			response = self.get(name, args)
+			response = self.get(args)
 			try:
 				await self.bot.send_message(message.channel, response)
 			except:
