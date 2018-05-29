@@ -1,8 +1,7 @@
 ###
 ###
 ### Replace bot_master_here with your Discord ID. (right click on your avatar in Developer mode).
-###If you set a IPC password, replace ?password=null with ?password=yourpassword
-###
+### If you set a IPC password, replace ?password=null with ?password=yourpassword
 ###
 ###
 import discord
