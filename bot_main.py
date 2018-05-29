@@ -2,8 +2,8 @@
 ### This bot needs python3.5 with modules discord.py and requests:
 ###
 ### sudo apt-get install python3 python3-pip
-### python3 -m pip install -U discord.py
-### python3 -m pip install -U requests
+### sudo python3 -m pip install -U discord.py
+### sudo python3 -m pip install -U requests
 ###
 ### Replace bot_token_here with your bot token.
 ###
