@@ -26,7 +26,7 @@ class Asf:
 		print (url)
 
 		try:
-			r = requests.post(url, timeout=10)
+			r = requests.post(url, timeout=30)
 		except requests.exceptions.RequestException as e:  # This is the correct syntax
 			return "Erreur : " + str(e)
 		json_res = r.json()
