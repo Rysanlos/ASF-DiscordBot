@@ -1,8 +1,8 @@
 # ASF-DiscordBot
 
 [![GitHub license](https://img.shields.io/github/license/LeO-Fr/ASF-DiscordBot.svg)](https://github.com/LeO-Fr/ASF-DiscordBot/blob/master/LICENSE)
-[![PyPI](https://img.shields.io/badge/Python-3.5-blue.svg)](https://pypi.python.org/)
-[![GitHub stable release version](https://img.shields.io/github/release/JustArchi/ArchiSteamFarm.svg?label=Stable&maxAge=600)](https://github.com/JustArchi/ArchiSteamFarm/releases/latest)
+[![Python](https://img.shields.io/badge/Python-3.5-blue.svg)](https://pypi.python.org/)
+[![ASF release](https://img.shields.io/github/release/JustArchi/ArchiSteamFarm.svg?label=ASF&maxAge=600)](https://github.com/JustArchi/ArchiSteamFarm/releases/latest)
 
 
 ## Requirements
