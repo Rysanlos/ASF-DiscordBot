@@ -18,7 +18,7 @@ from discord.ext.commands import Bot
 startup_extensions = ["bot_cog"]
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
-client = Bot(description="ASF-DiscordBot", command_prefix="!", pm_help = False)
+client = Bot(description="ASF-DiscordBot", command_prefix="?", pm_help = False)
 
 @client.event
 async def on_ready():
