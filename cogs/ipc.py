@@ -11,18 +11,18 @@ from discord.ext import commands
 # Needs python3-requests
 import requests
 
-class Asf:
+class Asf(commands.Cog):
 
 	def __init__(self, bot):
 		self.bot = bot
 		self.url_base = "http://127.0.0.1:1242/Api/Command/"
 		self.ipc_pass = "?password=null"
 		pass
-        
+
 	def get (self, params):
 		"""API access"""
 		url = "{url_base}{params}{ipc_pass}".format(url_base = self.url_base, params = params, ipc_pass = self.ipc_pass)
-		
+
 		print (url)
 
 		try:
