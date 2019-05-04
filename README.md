@@ -33,5 +33,5 @@ In bot_cog.py: If you set a IPC password, replace ?password=null with ?password=
 ## Run
 
 ```shell
-python3 bot_main.py
+python3 main.py
 ```
