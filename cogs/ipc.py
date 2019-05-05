@@ -33,7 +33,6 @@ class Asf(commands.Cog):
 		response = "Message : " + json_res["Message"] + "\n```\n" + json_res["Result"] + "\n```"
 		return response
 
-	#@commands.listen()
 	@commands.Cog.listener()
 	async def on_message(self,message):
 		if ( message.content[0] == "!" and message.author.id == bot_master_here):
