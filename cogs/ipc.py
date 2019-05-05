@@ -33,17 +33,17 @@ class Asf(commands.Cog):
 		response = "Message : " + json_res["Message"] + "\n```\n" + json_res["Result"] + "\n```"
 		return response
 
-	@commands.Cog.listener()
+	#@commands.listen()
 	async def on_message(self,message):
-		if ( message.content[0] == "!" and message.author.id == bot_master_here):
+		if ( message.content[0] == "!" and message.author.id == "bot_master_here"):
 			args = message.content[1:].replace(" ","%20")
 
-			async with message.channel.typing():
-				response = self.get(args)
-				try:
-					await message.channel.send(response)
-				except:
-					await message.channel.send("Message too long")
+			await self.bot.send_typing(message.channel)
+			response = self.get(args)
+			try:
+				await self.bot.send_message(message.channel, response)
+			except:
+				await self.bot.send_message(message.channel, "Message too long.")
 
 
 def setup(bot):
