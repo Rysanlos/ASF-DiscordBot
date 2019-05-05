@@ -22,10 +22,11 @@ client = Bot(description="ASF-DiscordBot", command_prefix="?", pm_help = False)
 
 @client.event
 async def on_ready():
-	print('Logged in as '+ str(client.user.name) +' (ID: '+ str(client.user.id) +')')
+	print('Logged in as '+ str(client.user.name) +' (ID: '+ str(client.user.id) +') | Connected to '+ str(len(client.guilds)) +' servers | Connected to '+ str(len(set(client.get_all_members()))) +' users')
 	print('Use this link to invite {}:'.format(client.user.name))
 	print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
 
+	guilds = client.guilds
 
 if __name__ == "__main__":
 	for extension in startup_extensions:
