@@ -25,13 +25,13 @@ cd ASF-DiscordBot
 ## Configuration
 
 ```
-In main.py: Replace bot_token_here with your bot token.
-In cogs/ipc.py: Replace bot_master_here with your Discord ID. (right click on your avatar in Developer mode).
-In cogs/ipc.py: If you set a IPC password, replace ?password=null with ?password=yourpassword
+In bot_main.py: Replace bot_token_here with your bot token.
+In bot_cog.py: Replace bot_master_here with your Discord ID. (right click on your avatar in Developer mode).
+In bot_cog.py: If you set a IPC password, replace ?password=null with ?password=yourpassword
 ```
 
 ## Run
 
 ```shell
-python3 main.py
+python3 bot_main.py
 ```
